@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_WAS_NF_HEADER'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_WAS_NF_HEADER'
+  }
+}
+define service ZAPI_WAS_NF_HEADER_O4 provider contracts odata_v4_webapi {
+  expose ZC_WAS_NF_HEADER;
+}

@@ -1,0 +1,11 @@
+{
+  "formatVersion": "1",
+  "header": {
+    "description": "SAP Object Node Type ZWAS_NF_HEADER",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "name": "ZWAS_NF_HEADER",
+  "sapObjectType": "ZWAS_NF_HEADER",
+  "rootNode": true
+}

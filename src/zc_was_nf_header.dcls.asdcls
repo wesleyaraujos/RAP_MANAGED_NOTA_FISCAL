@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZC_WAS_NF_HEADER'
+@MappingRole: true
+define role ZC_WAS_NF_HEADER {
+  grant select on ZC_WAS_NF_HEADER
+  where INHERITING CONDITIONS FROM ENTITY ZR_WAS_NF_HEADER REPLACING { ROOT WITH _BaseEntity };
+}

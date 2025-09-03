@@ -1,0 +1,34 @@
+managed implementation in class ZBP_R_WAS_NF_HEADER unique;
+strict ( 2 );
+extensible;
+define behavior for ZR_WAS_NF_HEADER alias ZrWasNfHeader
+persistent table ZWAS_NF_HEADER
+extensible
+lock master
+authorization master( global )
+{
+  field ( mandatory : create )
+   Docnum;
+
+  field ( readonly : update )
+   Docnum;
+
+  create;
+  update;
+  delete;
+
+  validation validateCoreData on save { create; field Parid; }
+
+  determination fillFixedValue on modify { create; update; }
+
+  action changePartner ;
+  static action changeFixedValue;
+
+  mapping for ZWAS_NF_HEADER corresponding extensible
+  {
+    Docnum = docnum;
+    Parid = parid;
+    Fixed_value = fixed_value;
+  }
+
+}

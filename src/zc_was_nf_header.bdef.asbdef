@@ -1,0 +1,15 @@
+projection implementation in class ZBP_C_WAS_NF_HEADER unique;
+strict ( 2 );
+extensible;
+use side effects;
+define behavior for ZC_WAS_NF_HEADER alias ZcWasNfHeader
+extensible
+{
+  use create;
+  use update;
+  use delete;
+
+  use action changePartner;
+  use action changeFixedValue;
+
+}
